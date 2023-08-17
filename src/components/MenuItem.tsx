@@ -16,7 +16,7 @@ const MenuItem: React.FC<{
     <div className="item-container">
       <img src={dish.image} alt={dish.name} />
       <em>{dish.name.toUpperCase()}</em>
-      <p>{dish.price}</p>
+      <p>{new Intl.NumberFormat("en-US").format(dish.price)}</p>
       <button className="btn-add__cart" onClick={() => onAddToCart(dish.id)}>
         Add To Cart
       </button>

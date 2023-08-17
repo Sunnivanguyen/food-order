@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlinePlus, AiOutlineMinus, AiFillDelete } from "react-icons/ai";
+import CartItem from "./CartItem";
 
 type DishType = {
   id: string;
@@ -27,16 +27,13 @@ const Cart: React.FC<{
       <h3>Cart</h3>
       <div className="cart">
         {carts.map((item) => (
-          <div key={item.id} className="cart-item">
-            <img src={item.image} alt={item.name} />
-            <p>{item.price}</p>
-            <div className="amount-control">
-              <AiOutlinePlus onClick={() => handleIncrease(item.id)} />
-              <em>{item.quantity}</em>
-              <AiOutlineMinus onClick={() => handleDecrease(item.id)} />
-            </div>
-            <AiFillDelete onClick={() => handleDelete(item.id)} />
-          </div>
+          <CartItem
+            key={item.id}
+            item={item}
+            handleIncrease={handleIncrease}
+            handleDecrease={handleDecrease}
+            handleDelete={handleDelete}
+          />
         ))}
       </div>
       <footer className="footer-cart">

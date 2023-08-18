@@ -1,17 +1,9 @@
 import React from "react";
 import { BsFillCartFill } from "react-icons/bs";
-
-type DishType = {
-  id: string;
-  name: string;
-  price: number;
-  soldout: boolean;
-  image: string;
-  quantity: number;
-};
+import { TypeDish } from "../models/data";
 
 const Header: React.FC<{
-  carts: DishType[];
+  carts: TypeDish[];
   onOpenCart: () => void;
 }> = (props) => {
   return (

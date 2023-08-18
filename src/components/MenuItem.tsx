@@ -1,15 +1,8 @@
 import React from "react";
-type DishType = {
-  id: string;
-  name: string;
-  price: number;
-  soldout: boolean;
-  image: string;
-  quantity: number;
-};
+import { TypeDish } from "../models/data";
 
 const MenuItem: React.FC<{
-  dish: DishType;
+  dish: TypeDish;
   onAddToCart: (id: string) => void;
 }> = ({ dish, onAddToCart }) => {
   return (

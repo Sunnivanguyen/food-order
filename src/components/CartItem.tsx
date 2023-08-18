@@ -1,17 +1,10 @@
 import React from "react";
 import { AiOutlinePlus, AiOutlineMinus, AiFillDelete } from "react-icons/ai";
 
-type DishType = {
-  id: string;
-  name: string;
-  price: number;
-  soldout: boolean;
-  image: string;
-  quantity: number;
-};
+import { TypeDish } from "../models/data";
 
 const CartItem: React.FC<{
-  item: DishType;
+  item: TypeDish;
   handleIncrease: (id: string) => void;
   handleDecrease: (id: string) => void;
   handleDelete: (id: string) => void;

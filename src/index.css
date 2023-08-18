@@ -66,6 +66,7 @@ main {
   align-items: center;
   justify-content: center;
   overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 .narrow {
@@ -112,12 +113,26 @@ main {
   z-index: 2000;
   border: 1px rgb(8, 69, 71) solid;
   box-shadow: rgba(234, 234, 234, 0.45) -5px 0px 25px 25px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .cart-container h3 {
   font-size: 26px;
-  margin-left: 50px;
-  margin-top: 50px;
+  margin: 30px;
+}
+
+.cart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  gap: 3px;
+  height: 80%;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 .cart-item {
@@ -139,15 +154,7 @@ main {
   object-fit: contain;
   background-color: rgb(67, 66, 66);
 }
-.cart {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  gap: 5px;
-}
+
 .footer-cart {
   width: 100%;
   height: 60px;
